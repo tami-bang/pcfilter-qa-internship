@@ -1,42 +1,42 @@
-# QA Checklist Sample
+# QA 체크리스트 샘플
 
-This checklist is rewritten for public portfolio use.
+이 체크리스트는 공개 포트폴리오용으로 재작성한 예시입니다.
 
-## Before Testing
+## 테스트 전
 
-- [ ] Confirm the test objective
-- [ ] Confirm the related user flow
-- [ ] Prepare safe sample data
-- [ ] Record OS and product build in a redacted format
-- [ ] Confirm whether the related policy is enabled or disabled
+- [ ] 테스트 목적을 확인한다
+- [ ] 관련 사용자 흐름을 확인한다
+- [ ] 안전한 샘플 데이터를 준비한다
+- [ ] OS와 제품 빌드를 비공개 처리 가능한 형태로 기록한다
+- [ ] 관련 정책의 활성화/비활성화 상태를 확인한다
 
-## Functional Check
+## 기능 확인
 
-- [ ] Run the target user action
-- [ ] Compare expected result and actual result
-- [ ] Check user-facing message wording
-- [ ] Check whether the result remains stable after retry
-- [ ] Check whether unrelated features are unaffected
+- [ ] 대상 사용자 동작을 수행한다
+- [ ] 기대 결과와 실제 결과를 비교한다
+- [ ] 사용자 안내 문구를 확인한다
+- [ ] 재시도 후에도 결과가 동일한지 확인한다
+- [ ] 관련 없는 기능에 영향이 없는지 확인한다
 
-## Policy Reflection
+## 정책 반영 확인
 
-- [ ] Change only the policy needed for the scenario
-- [ ] Trigger policy synchronization
-- [ ] Confirm the desktop agent reflects the changed policy
-- [ ] Confirm disabled features are hidden, blocked, or explained correctly
-- [ ] Restore the policy after the test if needed
+- [ ] 시나리오에 필요한 정책만 변경한다
+- [ ] 정책 동기화를 실행한다
+- [ ] 데스크톱 에이전트에 변경된 정책이 반영되는지 확인한다
+- [ ] 비활성화된 기능이 숨김, 차단, 안내 중 올바른 방식으로 처리되는지 확인한다
+- [ ] 필요하면 테스트 후 정책을 원복한다
 
-## Logs And Reports
+## 로그 및 리포트
 
-- [ ] Confirm whether the result is recorded
-- [ ] Compare client-side result and admin/report result
-- [ ] Check timestamps and status values
-- [ ] Redact private paths, account names, and customer data before sharing
+- [ ] 결과가 기록되는지 확인한다
+- [ ] 클라이언트 결과와 관리자/리포트 결과를 비교한다
+- [ ] 시간과 상태값을 확인한다
+- [ ] 공유 전 경로, 계정명, 고객 정보 등 민감정보를 제거한다
 
-## Closeout
+## 마무리
 
-- [ ] Write reproduction steps clearly
-- [ ] Attach or summarize evidence
-- [ ] Mark unresolved questions
-- [ ] Link related scenarios if this is a regression
-- [ ] Remove all internal identifiers from public notes
+- [ ] 재현 단계를 명확하게 작성한다
+- [ ] 증거를 첨부하거나 요약한다
+- [ ] 해결되지 않은 질문을 표시한다
+- [ ] 회귀 테스트라면 관련 시나리오를 연결한다
+- [ ] 공개 메모에서 내부 식별자를 모두 제거한다

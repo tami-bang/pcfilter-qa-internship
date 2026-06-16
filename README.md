@@ -1,31 +1,31 @@
 # PCFILTER QA Internship
 
-Public QA work sample based on an 8-week QA internship at Jiransoft.
+지란지교에서 8주 동안 QA 인턴으로 근무하며 수행한 PCFILTER 테스트 경험을 공개 가능한 형태로 재구성한 저장소입니다.
 
-This repository documents how I approached QA work for PCFILTER, a deployed endpoint security product, while keeping internal company information private. The materials here are rewritten as portfolio-safe samples. They do not include internal URLs, customer names, real tickets, credentials, logs, build files, or screenshots from private systems.
+PCFILTER는 실제 배포되어 사용되는 엔드포인트 보안 제품이지만, 이 저장소에는 회사 내부 정보가 포함되지 않도록 모든 내용을 포트폴리오용 샘플로 다시 작성했습니다. 내부 URL, 고객사명, 실제 티켓, 인증정보, 로그 원문, 빌드 파일, 사내 화면 스크린샷은 포함하지 않습니다.
 
-## What This Repository Shows
+## 이 저장소에서 보여주려는 것
 
-- How I understood a security product through user flows, admin policies, and logs
-- How I converted issue descriptions into reproducible QA scenarios
-- How I wrote test notes with clear conditions, expected results, actual results, and evidence
-- How I improved repetitive QA documentation work with a small automation sample
-- How I handled public documentation while protecting company and customer information
+- 보안 제품을 사용자 흐름, 관리자 정책, 로그 관점에서 이해한 방식
+- 이슈 설명을 재현 가능한 QA 시나리오로 바꾸는 과정
+- 조건, 기대 결과, 실제 결과, 증거를 분리해 테스트 기록을 남기는 방식
+- 반복되는 테스트 문서 작성 업무를 작은 자동화 샘플로 개선한 흐름
+- 회사와 고객 정보를 보호하면서 실무 경험을 공개 문서로 정리하는 기준
 
-## Internship Scope
+## 인턴십 업무 범위
 
-During the internship, I worked on QA tasks around a desktop security agent and its related admin settings. My work focused on verifying user-facing behavior, checking policy reflection, reproducing issues, and organizing test results so that developers and QA reviewers could follow the evidence.
+인턴 기간 동안 데스크톱 보안 에이전트와 관련 관리자 설정을 중심으로 QA 업무를 수행했습니다. 사용자 화면에서 보이는 동작, 정책 반영 여부, 이슈 재현 조건, 로그 및 리포트 일관성을 확인하고 개발자와 QA 리뷰어가 따라갈 수 있는 형태로 결과를 기록하는 데 집중했습니다.
 
-Representative areas:
+대표적으로 확인한 영역은 다음과 같습니다.
 
-- Personal data scan flows
-- File context-menu actions such as scan, encryption, and secure deletion
-- Policy synchronization between admin settings and the desktop agent
-- Log and report consistency checks
-- Media, print, file attachment, and software execution control scenarios
-- Regression checks after product changes
+- 개인정보 검사 흐름
+- 파일 우클릭 메뉴 기반 검사, 암호화, 완전삭제 동작
+- 관리자 설정과 데스크톱 에이전트 간 정책 동기화
+- 로그와 리포트의 결과 일관성
+- 매체, 출력물, 파일 첨부, 소프트웨어 실행 제어 시나리오
+- 제품 변경 후 회귀 테스트
 
-## Repository Structure
+## 저장소 구조
 
 ```text
 pcfilter-qa-internship/
@@ -43,35 +43,35 @@ pcfilter-qa-internship/
 └── package.json
 ```
 
-## Work Sample: QA Guide Automation
+## Work Sample: QA 가이드 자동화
 
-One repeated task was turning issue descriptions into test-guide drafts. The sample code in this repository recreates the idea in a safe, small form:
+반복적으로 발생한 업무 중 하나는 이슈 설명을 읽고 테스트 가이드 초안으로 옮기는 일이었습니다. 이 저장소의 샘플 코드는 그 아이디어를 공개 가능한 작은 예제로 재구성한 것입니다.
 
 ```text
-Issue summary and description
-  -> Keyword-based QA target selection
-  -> Scenario draft generation
-  -> Template safety check
-  -> Test-guide output ready for human review
+이슈 요약과 설명
+  -> 키워드 기반 QA 대상 선택
+  -> 시나리오 초안 생성
+  -> 템플릿 안전 검증
+  -> 사람이 검토할 수 있는 테스트 가이드 출력
 ```
 
-The automation sample intentionally avoids real Jira, Notion, or internal product data. It only demonstrates the logic pattern.
+자동화 샘플은 실제 Jira, Notion, 내부 제품 데이터를 사용하지 않습니다. 설계 방식과 로직 흐름만 보여주기 위한 예제입니다.
 
-## Run The Sample
+## 실행 방법
 
 ```bash
 npm test
 ```
 
-Node.js 18 or higher is enough. No external package installation is required.
+Node.js 18 이상이면 실행할 수 있습니다. 외부 패키지 설치는 필요하지 않습니다.
 
-## Public Case Study
+## 연결할 공개 페이지
 
-This repository is designed to be linked from:
+이 저장소는 아래 페이지에서 연결하기 위한 공개 Work Sample입니다.
 
-- GitHub profile: `https://github.com/tami-bang`
-- Portfolio case study: `https://tami-bang.github.io/projects/pcfilter-qa-case-study/`
+- GitHub 프로필: `https://github.com/tami-bang`
+- 포트폴리오 케이스스터디: `https://tami-bang.github.io/projects/pcfilter-qa-case-study/`
 
-## What I Learned
+## 배운 점
 
-QA is not only checking whether a button works. It is the process of connecting user behavior, policy conditions, logs, and evidence into a reproducible story. Through this internship, I learned to write clearer test records, reduce repeated manual work, and protect sensitive operational details when communicating publicly.
+QA는 단순히 버튼이 동작하는지 확인하는 일이 아니라, 사용자 행동과 정책 조건, 로그, 증거를 하나의 재현 가능한 이야기로 연결하는 과정이라는 것을 배웠습니다. 이 인턴십을 통해 테스트 기록을 더 명확하게 쓰는 법, 반복 업무를 줄이는 법, 실무 경험을 외부에 설명할 때 민감한 정보를 보호하는 법을 익혔습니다.

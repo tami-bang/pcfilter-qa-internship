@@ -1,37 +1,37 @@
-# Security And Privacy
+# 보안 및 공개 범위
 
-This repository is a sanitized portfolio work sample.
+이 저장소는 공개 포트폴리오용으로 재구성한 Work Sample입니다.
 
-## Included
+## 포함한 내용
 
-- Rewritten QA process documentation
-- Generic test strategy and checklist samples
-- Anonymous bug report examples
-- Small automation logic that demonstrates parsing and template-safety ideas
+- 다시 작성한 QA 프로세스 문서
+- 일반화한 테스트 전략과 체크리스트 샘플
+- 익명화한 버그 리포트 예시
+- 이슈 파싱과 템플릿 보호 아이디어를 보여주는 작은 자동화 로직
 
-## Excluded
+## 제외한 내용
 
-- Internal Jira, Notion, M-EP, or admin URLs
-- Real ticket IDs, customer names, account names, and organization names
-- Credentials, tokens, license data, server addresses, and database IDs
-- Original logs, original screenshots, and build artifacts
-- Private product configuration values
-- Any material that could reveal customer environments or internal operations
+- 내부 Jira, Notion, M-EP, 관리자 페이지 URL
+- 실제 티켓 ID, 고객사명, 계정명, 조직명
+- 인증정보, 토큰, 라이선스 데이터, 서버 주소, 데이터베이스 ID
+- 원본 로그, 원본 스크린샷, 빌드 파일
+- 비공개 제품 설정값
+- 고객 환경이나 내부 운영 방식을 드러낼 수 있는 자료
 
-## Writing Rule
+## 공개 문서 작성 기준
 
-When describing internship work publicly, use this pattern:
+인턴십 경험을 공개 문서로 설명할 때는 아래 기준을 따릅니다.
 
 ```text
-Describe the QA purpose, method, and result.
-Do not expose the private environment, raw evidence, or operational identifiers.
+QA 목적, 방법, 결과를 설명한다.
+비공개 환경, 원본 증거, 운영 식별자는 노출하지 않는다.
 ```
 
-Example:
+예시:
 
-- Good: "Verified that a policy change was reflected in the desktop agent after synchronization."
-- Avoid: "Changed policy X in internal admin URL Y for customer Z and confirmed log path A."
+- 좋은 예: "정책 변경 후 데스크톱 에이전트에 동작이 반영되는지 확인했습니다."
+- 피해야 할 예: "고객사 Z의 내부 관리자 URL Y에서 정책 X를 변경하고 로그 경로 A를 확인했습니다."
 
-## Product Naming
+## 제품명 표기
 
-PCFILTER is mentioned because it is a publicly distributed product. This repository does not claim to publish PCFILTER source code, private test data, or internal company documentation.
+PCFILTER는 공개적으로 배포되어 사용되는 제품이므로 제품명만 언급합니다. 이 저장소는 PCFILTER 소스 코드, 비공개 테스트 데이터, 회사 내부 문서를 공개하지 않습니다.

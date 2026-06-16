@@ -19,16 +19,16 @@ function validateTemplateState(document) {
 
   for (const title of REQUIRED_SECTIONS) {
     if (!sectionTitles.has(title)) {
-      reasons.push(`Required section is missing: ${title}`);
+      reasons.push(`필수 섹션이 없습니다: ${title}`);
     }
   }
 
   if (hasCompletionMarker(blocks)) {
-    reasons.push("Automation completion marker already exists.");
+    reasons.push("자동화 완료 마커가 이미 존재합니다.");
   }
 
   if (blocks.some((block) => USER_OWNED_BLOCK_TYPES.has(block.type))) {
-    reasons.push("User-owned rich content exists.");
+    reasons.push("사용자 소유의 리치 콘텐츠가 존재합니다.");
   }
 
   if (
@@ -38,7 +38,7 @@ function validateTemplateState(document) {
         String(block.text || "").trim().length > 0,
     )
   ) {
-    reasons.push("User-authored text exists.");
+    reasons.push("사용자가 작성한 텍스트가 존재합니다.");
   }
 
   return {

@@ -18,7 +18,7 @@ function emptyTemplate(extraBlocks = []) {
   };
 }
 
-test("parseIssue creates focused scenarios from issue keywords", () => {
+test("이슈 키워드에서 QA 시나리오를 생성한다", () => {
   const parsed = parseIssue({
     key: "QA-1042",
     summary: "Quick scan result is missing from exported report",
@@ -29,27 +29,27 @@ test("parseIssue creates focused scenarios from issue keywords", () => {
   assert.equal(parsed.sourceKey, "QA-1042");
   assert.deepEqual(
     parsed.scenarios.map((scenario) => scenario.title),
-    ["Quick scan behavior", "Log and report consistency"],
+    ["간편 검사 동작 확인", "로그 및 리포트 일관성 확인"],
   );
 });
 
-test("template guard allows an untouched template", () => {
+test("비어 있는 템플릿은 자동 작성을 허용한다", () => {
   assert.deepEqual(validateTemplateState(emptyTemplate()), {
     ok: true,
     reasons: [],
   });
 });
 
-test("template guard blocks user-authored text", () => {
+test("사용자가 작성한 텍스트가 있으면 자동 작성을 차단한다", () => {
   const result = validateTemplateState(
     emptyTemplate([{ type: "paragraph", text: "Existing note", owner: "user" }]),
   );
 
   assert.equal(result.ok, false);
-  assert.match(result.reasons.join("\n"), /User-authored text/);
+  assert.match(result.reasons.join("\n"), /사용자가 작성한 텍스트/);
 });
 
-test("template guard blocks repeated automation", () => {
+test("자동화 완료 마커가 있으면 반복 실행을 차단한다", () => {
   const result = validateTemplateState(
     emptyTemplate([
       {
@@ -61,5 +61,5 @@ test("template guard blocks repeated automation", () => {
   );
 
   assert.equal(result.ok, false);
-  assert.match(result.reasons.join("\n"), /completion marker/);
+  assert.match(result.reasons.join("\n"), /완료 마커/);
 });

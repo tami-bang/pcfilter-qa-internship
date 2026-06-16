@@ -2,34 +2,34 @@ const QA_TARGETS = [
   {
     id: "quick-scan",
     keywords: ["quick scan", "context menu", "scan result"],
-    title: "Quick scan behavior",
-    place: "Desktop agent > File context menu",
+    title: "간편 검사 동작 확인",
+    place: "데스크톱 에이전트 > 파일 우클릭 메뉴",
     steps: [
-      "Prepare a safe sample file that matches the test condition.",
-      "Run quick scan from the file context menu.",
-      "Confirm completion state, detection result, and user-facing message.",
+      "테스트 조건에 맞는 안전한 샘플 파일을 준비합니다.",
+      "파일 우클릭 메뉴에서 간편 검사를 실행합니다.",
+      "완료 상태, 검출 결과, 사용자 안내 문구를 확인합니다.",
     ],
   },
   {
     id: "policy-sync",
     keywords: ["policy", "sync", "not applied", "refresh"],
-    title: "Policy synchronization",
-    place: "Admin setting and desktop agent",
+    title: "정책 동기화 확인",
+    place: "관리자 설정 및 데스크톱 에이전트",
     steps: [
-      "Change only the policy related to the scenario.",
-      "Trigger synchronization on the desktop agent.",
-      "Confirm that changed behavior is reflected without affecting unrelated settings.",
+      "시나리오와 관련된 정책만 변경합니다.",
+      "데스크톱 에이전트에서 정책 동기화를 실행합니다.",
+      "변경된 동작이 관련 없는 설정에 영향 없이 반영되는지 확인합니다.",
     ],
   },
   {
     id: "report-export",
     keywords: ["report", "export", "log", "record"],
-    title: "Log and report consistency",
-    place: "Desktop agent logs and admin report",
+    title: "로그 및 리포트 일관성 확인",
+    place: "데스크톱 에이전트 로그 및 관리자 리포트",
     steps: [
-      "Create a result using the reproduction steps.",
-      "Compare the desktop-agent result with the report record.",
-      "Export the report and confirm timestamp, status, and count consistency.",
+      "재현 단계에 따라 결과를 생성합니다.",
+      "데스크톱 에이전트 결과와 리포트 기록을 비교합니다.",
+      "리포트를 내보낸 뒤 시간, 상태, 건수의 일관성을 확인합니다.",
     ],
   },
 ];
@@ -49,12 +49,12 @@ function inferTargets(text) {
 function fallbackTarget() {
   return {
     id: "core-flow",
-    title: "Core user flow",
-    place: "Desktop agent and related policy setting",
+    title: "핵심 사용자 흐름 확인",
+    place: "데스크톱 에이전트 및 관련 정책 설정",
     steps: [
-      "Reproduce the user flow described in the issue.",
-      "Compare the actual result with the expected result.",
-      "Record affected areas and evidence needed for follow-up.",
+      "이슈에 설명된 사용자 흐름을 재현합니다.",
+      "실제 결과와 기대 결과를 비교합니다.",
+      "영향 범위와 후속 확인에 필요한 증거를 기록합니다.",
     ],
   };
 }
@@ -67,8 +67,8 @@ function parseIssue(issue) {
 
   return {
     sourceKey: issue.key || "QA-SAMPLE",
-    overview: summary || "Summary requires review",
-    priority: issue.priority || "Unspecified",
+    overview: summary || "요약 검토 필요",
+    priority: issue.priority || "미지정",
     scenarios: selectedTargets.map((target, index) => ({
       id: `A${index + 1}`,
       title: target.title,

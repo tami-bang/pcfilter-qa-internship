@@ -1,54 +1,54 @@
-# Bug Report Sample
+# 버그 리포트 샘플
 
-This is an anonymous, portfolio-safe bug report example. It is not copied from a real internal ticket.
+이 문서는 공개 포트폴리오용으로 작성한 익명화 버그 리포트 예시입니다. 실제 내부 티켓을 복사한 내용이 아닙니다.
 
-## Summary
+## 요약
 
-Quick scan completes successfully, but the exported report does not include the latest scan result.
+간편 검사는 정상 완료되지만, 내보낸 리포트에 최신 검사 결과가 포함되지 않습니다.
 
-## Environment
+## 환경
 
-- Product: PCFILTER desktop agent
-- OS: macOS test environment
-- Build: Redacted
-- Account/customer: Redacted
+- 제품: PCFILTER 데스크톱 에이전트
+- OS: macOS 테스트 환경
+- 빌드: 비공개 처리
+- 계정/고객사: 비공개 처리
 
-## Preconditions
+## 사전 조건
 
-- Desktop agent is installed and running
-- Scan policy is enabled
-- Report export is available
-- Test file is prepared with safe sample data
+- 데스크톱 에이전트가 설치되어 실행 중이다
+- 검사 정책이 활성화되어 있다
+- 리포트 내보내기 기능을 사용할 수 있다
+- 안전한 샘플 데이터가 포함된 테스트 파일이 준비되어 있다
 
-## Steps To Reproduce
+## 재현 단계
 
-1. Open the file context menu.
-2. Run quick scan on the prepared sample file.
-3. Confirm that the scan result appears in the desktop agent.
-4. Open the report/export area.
-5. Export the latest scan report.
-6. Compare the exported report with the desktop agent result.
+1. 파일 우클릭 메뉴를 연다.
+2. 준비한 샘플 파일에 대해 간편 검사를 실행한다.
+3. 데스크톱 에이전트에서 검사 결과가 표시되는지 확인한다.
+4. 리포트 또는 내보내기 화면을 연다.
+5. 최신 검사 리포트를 내보낸다.
+6. 내보낸 리포트와 데스크톱 에이전트의 검사 결과를 비교한다.
 
-## Expected Result
+## 기대 결과
 
-The exported report includes the latest quick-scan result with matching time, file count, and result status.
+내보낸 리포트에 최신 간편 검사 결과가 포함되어야 하며, 시간, 파일 수, 결과 상태가 데스크톱 에이전트 결과와 일치해야 합니다.
 
-## Actual Result
+## 실제 결과
 
-The desktop agent shows the latest scan result, but the exported report only includes older records.
+데스크톱 에이전트에는 최신 검사 결과가 표시되지만, 내보낸 리포트에는 이전 기록만 포함됩니다.
 
-## Evidence
+## 증거
 
-- Redacted screen note: latest result visible in agent
-- Redacted report summary: latest result missing from export
-- Timestamp comparison: agent result time is later than newest exported row
+- 비공개 처리된 화면 메모: 에이전트에는 최신 결과가 표시됨
+- 비공개 처리된 리포트 요약: 내보낸 리포트에는 최신 결과가 없음
+- 시간 비교: 에이전트 결과 시간이 리포트의 최신 행보다 늦음
 
-## Impact
+## 영향
 
-Users may believe a scan result was not recorded, or administrators may review incomplete evidence.
+사용자는 검사 결과가 기록되지 않았다고 오해할 수 있고, 관리자는 불완전한 근거를 바탕으로 결과를 검토할 수 있습니다.
 
-## QA Notes
+## QA 메모
 
-- Reproduced twice with the same sample file
-- Needs comparison with full scan and selected scan flows
-- Needs confirmation whether this is export filtering, synchronization timing, or report query behavior
+- 동일한 샘플 파일로 2회 재현됨
+- 전체 검사와 선택 검사 흐름에서도 비교 필요
+- 리포트 필터링, 동기화 시점, 리포트 조회 조건 중 어느 영역의 문제인지 추가 확인 필요

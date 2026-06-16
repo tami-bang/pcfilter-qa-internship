@@ -1,54 +1,54 @@
-# Test Strategy Sample
+# 테스트 전략 샘플
 
-## Goal
+## 목표
 
-Verify that PCFILTER user-facing behavior matches the configured policy and that the result is traceable through logs or reports.
+PCFILTER의 사용자 화면 동작이 설정된 정책과 일치하는지 확인하고, 그 결과가 로그나 리포트로 추적 가능한지 검증합니다.
 
-## QA Perspective
+## QA 관점
 
-The test is organized around four questions:
+테스트는 네 가지 질문을 기준으로 정리합니다.
 
-1. What user action triggers the behavior?
-2. Which policy or condition should affect the behavior?
-3. What should the user see?
-4. What evidence proves the result?
+1. 어떤 사용자 행동이 동작을 발생시키는가?
+2. 어떤 정책이나 조건이 해당 동작에 영향을 주는가?
+3. 사용자는 어떤 결과를 보게 되는가?
+4. 그 결과를 증명할 수 있는 증거는 무엇인가?
 
-## Test Layers
+## 테스트 레이어
 
-| Layer | What To Check | Example Evidence |
+| 레이어 | 확인할 내용 | 예시 증거 |
 |---|---|---|
-| User flow | Menu, button, popup, result message | Screen note or reproduction step |
-| Policy | Whether the related setting is enabled or disabled | Policy state summary |
-| Client behavior | Scan, block, encrypt, delete, or allow result | Result message and timestamp |
-| Record | Log, report, or admin history consistency | Redacted log/report summary |
+| 사용자 흐름 | 메뉴, 버튼, 팝업, 결과 메시지 | 화면 메모 또는 재현 단계 |
+| 정책 | 관련 설정의 ON/OFF 상태 | 정책 상태 요약 |
+| 클라이언트 동작 | 검사, 차단, 암호화, 삭제, 허용 결과 | 결과 메시지와 시간 |
+| 기록 | 로그, 리포트, 관리자 이력 일관성 | 민감정보 제거된 로그/리포트 요약 |
 
-## Scenario Design
+## 시나리오 설계
 
-Each scenario should include:
+각 시나리오는 아래 항목을 포함합니다.
 
-- Preconditions
-- Test data
-- Steps
-- Expected result
-- Actual result
-- Evidence
-- Follow-up decision
+- 사전 조건
+- 테스트 데이터
+- 수행 단계
+- 기대 결과
+- 실제 결과
+- 증거
+- 후속 판단
 
-## Regression Focus
+## 회귀 테스트 우선순위
 
-Regression tests should prioritize:
+회귀 테스트에서는 다음 항목을 우선 확인합니다.
 
-- Existing flows affected by the changed policy
-- Boundary states such as disabled features, empty results, and missing permissions
-- Cross-surface consistency between desktop agent, admin settings, and reports
-- User-facing messages that could confuse non-technical users
+- 변경된 정책의 영향을 받을 수 있는 기존 흐름
+- 기능 비활성화, 빈 결과, 권한 누락 같은 경계 상태
+- 데스크톱 에이전트, 관리자 설정, 리포트 간 결과 일관성
+- 비기술 사용자가 오해할 수 있는 사용자 안내 문구
 
-## Exit Criteria
+## 종료 기준
 
-A test can be closed when:
+아래 조건을 만족하면 테스트를 종료할 수 있습니다.
 
-- The reproduction path is clear
-- The expected and actual results are compared
-- Evidence is attached or summarized
-- Any remaining risk is written down
-- Sensitive information is removed from public-facing notes
+- 재현 경로가 명확하다
+- 기대 결과와 실제 결과가 비교되어 있다
+- 증거가 첨부되었거나 요약되어 있다
+- 남은 위험이나 확인 필요 사항이 기록되어 있다
+- 공개 문서에 민감정보가 남아 있지 않다

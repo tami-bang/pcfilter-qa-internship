@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "type": "module",
-  "description": "Sanitized QA internship work sample for PCFILTER.",
+  "description": "PCFILTER QA 인턴 경험을 공개 가능한 형태로 정리한 Work Sample.",
   "scripts": {
     "test": "node --test"
   },
