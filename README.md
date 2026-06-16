@@ -81,6 +81,7 @@ pcfilter-qa-internship/
 │   ├── screen-navigation.md
 │   ├── test-guide-automation.md
 │   ├── test-strategy.md
+│   ├── terminology.md
 │   ├── workflow-learning.md
 │   └── work-log-2026-06-16.md
 ├── src/
@@ -110,6 +111,7 @@ npm test
 - [Codex + MCP 스타터 키트 정리](docs/codex-mcp-starter-kit.md)
 - [화면 네비게이션 정리](docs/screen-navigation.md)
 - [테스트 가이드 자동화 정리](docs/test-guide-automation.md)
+- [8주 동안 익힌 용어 정리](docs/terminology.md)
 - [업무 도구와 협업 흐름에서 배운 점](docs/workflow-learning.md)
 - [QA 체크리스트 샘플](docs/checklist-sample.md)
 - [익명화 버그 리포트 샘플](docs/bug-report-sample.md)
