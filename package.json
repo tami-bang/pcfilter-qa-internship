@@ -1,0 +1,13 @@
+{
+  "name": "pcfilter-qa-internship",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Sanitized QA internship work sample for PCFILTER.",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
